@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CherryPoints Travel Rewards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span>🍒</span> CherryPoints</div>
+  <nav><a href="#deals">Travel Deals</a><a href="#buy">Buy Points</a><a href="#earn">Earn</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="eyebrow">TRAVEL REWARDS</p>
+    <h1>Earn points. <span>Travel smarter.</span></h1>
+    <p class="hero-copy">Build your CherryPoints balance for discounted hotel and flight offers.</p>
+    <div class="hero-actions"><button onclick="scrollToId('buy')">Buy CherryPoints</button><button class="secondary" onclick="scrollToId('earn')">Earn Free Points</button></div>
+  </div>
+  <div class="balance-card">
+    <p>Available Balance</p><strong id="balance">1,000</strong><small>CherryPoints</small>
+    <button class="light" onclick="showTransactions()">View activity</button>
+  </div>
+</section>
+
+<section class="stats">
+  <div><b id="statBalance">1,000</b><span>Points Balance</span></div>
+  <div><b>3</b><span>Travel Deals</span></div>
+  <div><b>5,000</b><span>Referral Bonus</span></div>
+</section>
+
+<section id="buy" class="section">
+  <div class="section-head"><div><p class="eyebrow">POINT STORE</p><h2>Buy CherryPoints</h2></div><p>More points, better value.</p></div>
+  <div class="packages" id="packages"></div>
+</section>
+
+<section id="earn" class="section dark">
+  <div class="section-head"><div><p class="eyebrow">FREE REWARDS</p><h2>Earn CherryPoints</h2></div></div>
+  <div class="earn-grid">
+    <div class="earn-card"><span>🎉</span><h3>Welcome Bonus</h3><p>Start with free points.</p><button onclick="claimWelcome()">Claim 1,000</button></div>
+    <div class="earn-card"><span>📅</span><h3>Daily Check-In</h3><p>Come back every day.</p><button onclick="claimDaily()">Claim 100</button></div>
+    <div class="earn-card"><span>👥</span><h3>Refer a Friend</h3><p>Invite friends and earn.</p><button onclick="claimReferral()">Get Referral Code</button></div>
+  </div>
+</section>
+
+<section id="deals" class="section">
+  <div class="section-head"><div><p class="eyebrow">TRAVEL MARKETPLACE</p><h2>Featured Deals</h2></div><p>Demo inventory for the MVP.</p></div>
+  <div class="deals" id="dealsGrid"></div>
+</section>
+
+<section class="section how">
+  <p class="eyebrow">HOW IT WORKS</p><h2>Three simple steps</h2>
+  <div class="steps">
+    <div><b>01</b><h3>Earn or buy</h3><p>Collect free points or purchase a package.</p></div>
+    <div><b>02</b><h3>Find a deal</h3><p>Browse discounted travel inventory.</p></div>
+    <div><b>03</b><h3>Redeem</h3><p>Apply CherryPoints to eligible bookings.</p></div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 CherryPoints. Demo MVP. Travel inventory, payment processing and loyalty-program integrations require production integrations and terms.</footer>
+
+<div id="modal" class="modal hidden"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<script src="app.js"></script>
+</body>
+</html>
